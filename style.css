@@ -363,78 +363,107 @@ body {
 ══════════════════════════════════════ */
 .details-section {
   background: var(--indigo);
-  padding: 2.5rem 0 0;
+  padding: 3rem 0 3.5rem;
 }
 
-/* Pit-stop timing board */
-.pit-board {
+.details-title { color: var(--white); }
+
+/* ── Race Day cards ── */
+.rd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.rd-card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem 1.35rem;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  overflow: hidden;
+  transition: background 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
 }
 
-.pit-item {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  padding: 1.4rem 1.5rem;
-  position: relative;
-  transition: background 0.2s ease;
+.rd-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(220,38,38,0.35);
+  transform: translateY(-3px);
 }
 
-.pit-item:hover {
-  background: rgba(255,255,255,0.04);
+.rd-card--accent {
+  background: rgba(220,38,38,0.08);
+  border-color: rgba(220,38,38,0.22);
 }
 
-.pit-icon {
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  background: rgba(220,38,38,0.15);
-  border: 1px solid rgba(220,38,38,0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--red);
+.rd-card--accent:hover {
+  background: rgba(220,38,38,0.14);
+  border-color: rgba(220,38,38,0.5);
 }
 
-.pit-icon svg {
-  width: 1.1rem;
-  height: 1.1rem;
+.rd-top-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+  border-radius: 14px 14px 0 0;
 }
 
-.pit-lbl {
+.rd-lbl {
   font-size: 0.58rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.55rem;
+  display: block;
+}
+
+.rd-val {
+  font-family: var(--ff-display);
+  font-size: clamp(2.1rem, 10vw, 3rem);
+  line-height: 0.88;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.65rem;
+}
+
+.rd-val--num {
+  font-size: clamp(3.8rem, 18vw, 5.5rem);
+  color: var(--red);
+  line-height: 0.82;
+}
+
+.rd-val--colon {
+  font-size: 0.65em;
+  opacity: 0.7;
+}
+
+.rd-sub {
+  font-family: var(--ff-body);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.35);
-  display: block;
-  margin-bottom: 0.2rem;
+  line-height: 1.5;
+  margin-top: auto;
 }
 
-.pit-val {
-  font-family: var(--ff-display);
-  font-size: clamp(1.3rem, 5.5vw, 1.7rem);
-  color: var(--white);
-  line-height: 1;
-  letter-spacing: 0.03em;
-  display: block;
+.rd-corner {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.45;
 }
 
-.pit-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.pit-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.07);
-  margin: 0 1.5rem;
-}
+.rd-corner span { border-radius: 1px; }
 
 /* ══════════════════════════════════════
    GARAGE SECTION
@@ -748,11 +777,9 @@ body {
 @media (min-width: 540px) {
   .hero-chips { flex-direction: row; flex-wrap: wrap; }
   .hero-chip { width: auto; }
-  .pit-board { flex-direction: row; align-items: stretch; }
-  .pit-item { flex: 1; flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 2rem 1.75rem; border-right: 1px solid rgba(255,255,255,0.07); }
-  .pit-item:last-child { border-right: none; }
-  .pit-val { font-size: 1.5rem; }
-  .pit-divider { display: none; }
+  .rd-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .rd-val { font-size: 2.6rem; }
+  .rd-val--num { font-size: 5rem; }
   .map-btn { width: auto; display: inline-flex; }
 }
 
