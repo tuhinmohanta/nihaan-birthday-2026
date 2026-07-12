@@ -44,7 +44,7 @@
   ───────────────────────────────────── */
   var slides   = document.querySelectorAll('.bg-slide');
   var fillEl   = document.getElementById('heroFill');
-  var DURATION = 5000;
+  var DURATION = 3571; // 40% faster than 5000ms (5000 / 1.4)
   var current  = 0;
   var startTs  = null;
   var raf;
