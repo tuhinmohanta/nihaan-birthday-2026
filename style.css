@@ -117,13 +117,28 @@ body {
   display: block;
 }
 
+/* Alternating Ken Burns: odd slides push in, even slides pull out.
+   ~4.5s ease-out so the zoom lands within the 3.6s cadence + crossfade. */
 .bg-slide.is-active img {
-  animation: kenburns 9s ease-out forwards;
+  animation: kenburns-in 4.5s ease-out forwards;
 }
 
-@keyframes kenburns {
-  from { transform: scale(1.0) translate(0, 0); }
-  to   { transform: scale(1.1) translate(-1%, -0.5%); }
+.bg-slide:nth-child(even).is-active img {
+  animation-name: kenburns-out;
+}
+
+@keyframes kenburns-in {
+  from { transform: scale(1.0)  translate(0, 0); }
+  to   { transform: scale(1.12) translate(-1.2%, -0.6%); }
+}
+
+@keyframes kenburns-out {
+  from { transform: scale(1.12) translate(1.2%, 0.6%); }
+  to   { transform: scale(1.0)  translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-slide.is-active img { animation: none; }
 }
 
 /* Overlay — warm indigo gradient, never black */
