@@ -250,6 +250,81 @@ body {
   transition: opacity 0.5s ease;
 }
 
+/* Live car panel */
+.car-panel { margin-bottom: 0.7rem; }
+
+.car-panel-inner {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 0.85rem 1rem 0.9rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.car-panel-inner.is-fading {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.cp-brand {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.2rem;
+}
+
+.cp-name {
+  font-family: var(--ff-display);
+  font-size: clamp(1.65rem, 7.5vw, 2.6rem);
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 0.95;
+  margin-bottom: 0.75rem;
+}
+
+.cp-stats { display: flex; gap: 0; }
+
+.cp-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  padding-right: 0.65rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.cp-stat + .cp-stat { padding-left: 0.65rem; }
+.cp-stat:last-child  { border-right: none; padding-right: 0; }
+
+.cp-val {
+  font-family: var(--ff-display);
+  font-size: clamp(1.35rem, 5.5vw, 1.9rem);
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.cp-stat--hl .cp-val { color: var(--red); }
+
+.cp-val--sm {
+  font-family: var(--ff-body);
+  font-size: clamp(0.72rem, 2.8vw, 0.85rem);
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: 0.1rem;
+}
+
+.cp-lbl {
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
 /* Progress bar — red line at very bottom */
 .hero-progress-bar {
   position: absolute;
