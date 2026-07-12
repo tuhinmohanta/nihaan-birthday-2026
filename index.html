@@ -28,6 +28,9 @@
   <meta name="twitter:description" content="Join us for Nihaan's 7th birthday dinner on Saturday, 18 July 2026 at Tall Oaks, Bengaluru. 7:00 PM onwards." />
   <meta name="twitter:image"       content="https://tuhinmohanta.github.io/nihaan-birthday-2026/og-image.jpg" />
 
+  <!-- Preload only the first hero image so it paints fast on mobile -->
+  <link rel="preload" as="image" href="img/bmw-m4.webp" type="image/webp" fetchpriority="high" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -41,13 +44,48 @@
   <header class="hero">
 
     <div class="hero-bg" id="heroBg">
-      <div class="bg-slide is-active"><img src="img/bmw-m4.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/lamborghini-revuelto.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/ferrari-296.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/bmw-m8.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/bugatti-chiron.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/mercedes-amg-one.jpg" alt="" /></div>
-      <div class="bg-slide"><img src="img/bugatti-bolide.jpg" alt="" /></div>
+      <div class="bg-slide is-active">
+        <picture>
+          <source srcset="img/bmw-m4.webp" type="image/webp" />
+          <img src="img/bmw-m4.jpg" alt="" width="1920" height="935" fetchpriority="high" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/lamborghini-revuelto.webp" type="image/webp" />
+          <img data-src="img/lamborghini-revuelto.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/ferrari-296.webp" type="image/webp" />
+          <img data-src="img/ferrari-296.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/bmw-m8.webp" type="image/webp" />
+          <img data-src="img/bmw-m8.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/bugatti-chiron.webp" type="image/webp" />
+          <img data-src="img/bugatti-chiron.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/mercedes-amg-one.webp" type="image/webp" />
+          <img data-src="img/mercedes-amg-one.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
+      <div class="bg-slide">
+        <picture>
+          <source data-srcset="img/bugatti-bolide.webp" type="image/webp" />
+          <img data-src="img/bugatti-bolide.jpg" alt="" decoding="async" />
+        </picture>
+      </div>
     </div>
 
     <div class="hero-overlay"></div>
@@ -200,7 +238,7 @@
         <div class="garage-track" id="garageTrack">
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/bmw-m4.jpg" alt="BMW M4 Competition" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/bmw-m4-sm.webp" type="image/webp" /><img src="img/bmw-m4-sm.jpg" alt="BMW M4 Competition" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">01</span>
               <span class="g-brand">BMW</span>
@@ -214,7 +252,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/lamborghini-revuelto.jpg" alt="Lamborghini Revuelto" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/lamborghini-revuelto-sm.webp" type="image/webp" /><img src="img/lamborghini-revuelto-sm.jpg" alt="Lamborghini Revuelto" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">02</span>
               <span class="g-brand">Lamborghini</span>
@@ -228,7 +266,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/ferrari-296.jpg" alt="Ferrari 296 Spider" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/ferrari-296-sm.webp" type="image/webp" /><img src="img/ferrari-296-sm.jpg" alt="Ferrari 296 Spider" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">03</span>
               <span class="g-brand">Ferrari</span>
@@ -242,7 +280,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/bmw-m8.jpg" alt="BMW M8 Competition" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/bmw-m8-sm.webp" type="image/webp" /><img src="img/bmw-m8-sm.jpg" alt="BMW M8 Competition" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">04</span>
               <span class="g-brand">BMW</span>
@@ -256,7 +294,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/bugatti-chiron.jpg" alt="Bugatti Chiron" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/bugatti-chiron-sm.webp" type="image/webp" /><img src="img/bugatti-chiron-sm.jpg" alt="Bugatti Chiron" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">05</span>
               <span class="g-brand">Bugatti</span>
@@ -270,7 +308,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/mercedes-amg-one.jpg" alt="Mercedes-AMG ONE" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/mercedes-amg-one-sm.webp" type="image/webp" /><img src="img/mercedes-amg-one-sm.jpg" alt="Mercedes-AMG ONE" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">06</span>
               <span class="g-brand">Mercedes-AMG</span>
@@ -284,7 +322,7 @@
           </article>
 
           <article class="garage-slide">
-            <div class="garage-img"><img src="img/bugatti-bolide.jpg" alt="Bugatti Bolide" loading="lazy" /></div>
+            <div class="garage-img"><picture><source srcset="img/bugatti-bolide-sm.webp" type="image/webp" /><img src="img/bugatti-bolide-sm.jpg" alt="Bugatti Bolide" loading="lazy" decoding="async" /></picture></div>
             <div class="garage-info">
               <span class="g-num" aria-hidden="true">07</span>
               <span class="g-brand">Bugatti</span>

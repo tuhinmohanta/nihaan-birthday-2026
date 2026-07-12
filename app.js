@@ -49,9 +49,25 @@
   var startTs  = null;
   var raf;
 
+  // Deferred hero images: swap data-src/data-srcset into src/srcset on demand
+  // so only the visible slide (and the next one) download — not all seven.
+  function ensureSlide(idx) {
+    var slide = slides[(idx + slides.length) % slides.length];
+    if (!slide) return;
+    var src = slide.querySelector('img[data-src]');
+    if (src) {
+      var source = slide.querySelector('source[data-srcset]');
+      if (source) { source.srcset = source.getAttribute('data-srcset'); source.removeAttribute('data-srcset'); }
+      src.src = src.getAttribute('data-src');
+      src.removeAttribute('data-src');
+    }
+  }
+
   function heroGoTo(idx) {
     slides[current].classList.remove('is-active');
     current = (idx + slides.length) % slides.length;
+    ensureSlide(current);      // make sure the slide we're showing is loaded
+    ensureSlide(current + 1);  // preload the next one so it's ready in 5s
     slides[current].classList.add('is-active');
     updatePanel(carData[current]);
     startTs = null;
@@ -71,7 +87,10 @@
     }
   }
 
-  if (slides.length) raf = requestAnimationFrame(tick);
+  if (slides.length) {
+    ensureSlide(1); // preload the next slide so the first transition is ready
+    raf = requestAnimationFrame(tick);
+  }
 
   /* ─────────────────────────────────────
      GARAGE CAROUSEL
