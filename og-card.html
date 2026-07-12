@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1200px; height: 630px; overflow: hidden; background: #1E1B4B; }
+
+.card {
+  position: relative;
+  width: 1200px;
+  height: 630px;
+  background: #1E1B4B;
+  overflow: hidden;
+  font-family: Impact, 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Background car image */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Gradient overlay — stronger on left for text, fades right to reveal car */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(30,27,75,0.97) 0%,
+      rgba(30,27,75,0.88) 35%,
+      rgba(30,27,75,0.60) 60%,
+      rgba(30,27,75,0.30) 100%
+    );
+}
+
+/* Red vignette stripe on left edge */
+.edge-stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: #DC2626;
+}
+
+/* All content */
+.content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 52px 64px 0 64px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.70);
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 9px 22px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+/* Name */
+.name {
+  font-size: 190px;
+  line-height: 0.82;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+  text-shadow: 0 4px 60px rgba(30,27,75,0.6);
+}
+
+/* "is turning 7" row */
+.turning-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.is-turning {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.seven {
+  font-size: 168px;
+  line-height: 0.85;
+  color: #DC2626;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 60px rgba(220,38,38,0.5);
+}
+
+.spacer { flex: 1; }
+
+/* Bottom details */
+.details-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.detail-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,251,240,0.70);
+}
+
+.detail-chip .dot {
+  width: 6px;
+  height: 6px;
+  background: #DC2626;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Checkered band at very bottom */
+.check-band {
+  display: flex;
+  width: 100%;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* Car spec watermark on right side */
+.spec-watermark {
+  position: absolute;
+  right: 64px;
+  bottom: 60px;
+  z-index: 4;
+  text-align: right;
+}
+
+.spec-watermark .sw-brand {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #DC2626;
+  margin-bottom: 6px;
+}
+
+.spec-watermark .sw-name {
+  font-size: 52px;
+  line-height: 0.9;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.spec-watermark .sw-stat {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.40);
+  line-height: 1.8;
+}
+
+.spec-watermark .sw-val {
+  font-size: 28px;
+  color: rgba(255,255,255,0.65);
+  margin-right: 6px;
+  font-family: Impact, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <img class="bg-img" src="img/bugatti-chiron.jpg" crossorigin="anonymous" alt="">
+  <div class="overlay"></div>
+  <div class="edge-stripe"></div>
+
+  <div class="content">
+    <span class="badge">&#127937; Birthday Invitation</span>
+    <div class="name">NIHAAN</div>
+    <div class="turning-row">
+      <span class="is-turning">is turning</span>
+      <span class="seven">7</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="details-row">
+      <div class="detail-chip">
+        <span class="dot"></span>
+        Saturday, 18 July 2026
+      </div>
+      <div class="divider"></div>
+      <div class="detail-chip">
+        <span class="dot"></span>
+        7:00 PM onwards
+      </div>
+      <div class="divider"></div>
+      <div class="detail-chip">
+        <span class="dot"></span>
+        Tall Oaks, Bengaluru
+      </div>
+    </div>
+    <div class="check-band" id="checkBand"></div>
+  </div>
+
+  <!-- Bugatti spec watermark — right side -->
+  <div class="spec-watermark">
+    <div class="sw-brand">Bugatti</div>
+    <div class="sw-name">CHIRON</div>
+    <div class="sw-stat"><span class="sw-val">1,479</span> hp &nbsp;·&nbsp; <span class="sw-val">2.4s</span> 0–100 &nbsp;·&nbsp; <span class="sw-val">420</span> km/h</div>
+  </div>
+</div>
+
+<script>
+// Generate checkered band
+const band = document.getElementById('checkBand');
+const colors = ['#DC2626', '#FFFBF0'];
+for (let i = 0; i < 46; i++) {
+  const sq = document.createElement('div');
+  sq.style.cssText = 'flex:1;height:32px;background:' + colors[i % 2];
+  band.appendChild(sq);
+}
+</script>
+</body>
+</html>
