@@ -5,211 +5,247 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nihaan Turns 7 - Start Your Engines!</title>
   <meta name="description" content="You're invited to Nihaan's 7th birthday dinner celebration on 18 July 2026 at Tall Oaks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="checkered-band"></div>
-    <div class="hero-inner">
-      <div class="car-wrap">
-        <svg class="race-car" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="22" y="38" width="170" height="30" rx="9" fill="#E8442B"/>
-          <ellipse cx="107" cy="38" rx="42" ry="18" fill="#CC3322"/>
-          <ellipse cx="107" cy="37" rx="31" ry="11" fill="#7ED4F7" opacity="0.85"/>
-          <polygon points="185,56 215,50 215,68 185,68" fill="#CC3322"/>
-          <rect x="14" y="30" width="14" height="5" rx="2.5" fill="#AA2211"/>
-          <circle cx="58" cy="70" r="14" fill="#1a1a1a"/>
-          <circle cx="58" cy="70" r="8" fill="#444"/>
-          <circle cx="58" cy="70" r="3" fill="#888"/>
-          <circle cx="158" cy="70" r="14" fill="#1a1a1a"/>
-          <circle cx="158" cy="70" r="8" fill="#444"/>
-          <circle cx="158" cy="70" r="3" fill="#888"/>
-          <rect x="8" y="46" width="16" height="7" rx="3.5" fill="#991100"/>
-          <text x="107" y="57" text-anchor="middle" font-size="15" font-weight="900" fill="#fff" font-family="Arial Black, Arial, sans-serif">7</text>
-        </svg>
-      </div>
-      <p class="pre-headline">Ready, Set, Celebrate!</p>
-      <h1>Nihaan is turning <span class="accent">7</span></h1>
-      <p class="tagline">Start your engines - it's party time!</p>
-      <div class="event-snapshot">
-        <div class="snapshot-item">
-          <span class="snap-icon">📅</span>
-          <div>
-            <span class="snap-label">Date</span>
-            <span class="snap-value">Saturday, 18 July 2026</span>
-          </div>
+    <div class="hero-check-bar"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🏁 Birthday Invitation</div>
+      <h1>Nihaan is<br/><span class="hero-accent">Turning 7</span></h1>
+      <p class="hero-sub">Start your engines - it's party time!</p>
+
+      <div class="hero-meta">
+        <div class="meta-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Sat, 18 July 2026
         </div>
-        <div class="snapshot-divider"></div>
-        <div class="snapshot-item">
-          <span class="snap-icon">🕖</span>
-          <div>
-            <span class="snap-label">Time</span>
-            <span class="snap-value">7:00 PM onwards</span>
-          </div>
+        <div class="meta-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          7:00 PM onwards
         </div>
-        <div class="snapshot-divider"></div>
-        <div class="snapshot-item">
-          <span class="snap-icon">📍</span>
-          <div>
-            <span class="snap-label">Venue</span>
-            <span class="snap-value">Tall Oaks, Bengaluru</span>
-          </div>
+        <div class="meta-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Tall Oaks, Bengaluru
         </div>
       </div>
     </div>
-    <div class="checkered-band"></div>
+    <div class="hero-check-bar"></div>
   </header>
 
   <main>
 
-    <!-- EVENT DETAILS -->
-    <section class="section details-section">
-      <h2 class="section-title"><span class="flag-icon">🏁</span> Race Day Details</h2>
-      <div class="details-grid">
-        <div class="detail-card">
-          <div class="detail-label">Occasion</div>
-          <div class="detail-value">Birthday Dinner Celebration</div>
-        </div>
-        <div class="detail-card">
-          <div class="detail-label">Date</div>
-          <div class="detail-value">Saturday, 18 July 2026</div>
-        </div>
-        <div class="detail-card">
-          <div class="detail-label">Time</div>
-          <div class="detail-value">7:00 PM onwards</div>
-        </div>
-        <div class="detail-card">
-          <div class="detail-label">Venue</div>
-          <div class="detail-value">Tall Oaks, Bengaluru</div>
-        </div>
+    <!-- CAR SHOWCASE -->
+    <section class="showcase-section">
+      <div class="showcase-header">
+        <h2>Nihaan's Dream Garage</h2>
+        <p>Handpicked by the birthday boy himself</p>
+      </div>
+
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/bmw-m4.jpg" alt="BMW M4 Competition" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">BMW</span>
+              <h3 class="car-slide-name">M4 Competition</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">503</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">3.9s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">290</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/lamborghini-revuelto.jpg" alt="Lamborghini Revuelto" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">Lamborghini</span>
+              <h3 class="car-slide-name">Revuelto</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">1,001</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">2.5s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">350</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/ferrari-296.jpg" alt="Ferrari 296 Spider" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">Ferrari</span>
+              <h3 class="car-slide-name">296 Spider</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">830</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">2.9s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">330</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/bmw-m8.jpg" alt="BMW M8 Competition" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">BMW</span>
+              <h3 class="car-slide-name">M8 Competition</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">617</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">3.3s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">305</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/bugatti-chiron.jpg" alt="Bugatti Chiron" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">Bugatti</span>
+              <h3 class="car-slide-name">Chiron</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">1,479</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">2.4s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">420</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/mercedes-amg-one.jpg" alt="Mercedes-AMG ONE" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">Mercedes-AMG</span>
+              <h3 class="car-slide-name">AMG ONE</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">1,063</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">2.9s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">352</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-slide">
+            <div class="car-slide-img">
+              <img src="img/bugatti-bolide.jpg" alt="Bugatti Bolide" />
+            </div>
+            <div class="car-slide-info">
+              <span class="car-slide-brand">Bugatti</span>
+              <h3 class="car-slide-name">Bolide</h3>
+              <div class="car-slide-stats">
+                <div class="stat"><span class="stat-val">1,825</span><span class="stat-lbl">HP</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">2.2s</span><span class="stat-lbl">0-100 km/h</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="stat-val">500</span><span class="stat-lbl">Top km/h</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.carousel-track -->
+
+        <button class="carousel-btn carousel-btn--prev" id="prevBtn" aria-label="Previous car">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" id="nextBtn" aria-label="Next car">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </section>
 
-    <!-- CAR GALLERY -->
-    <section class="section garage-section">
-      <h2 class="section-title"><span class="flag-icon">🚗</span> Nihaan's Dream Garage</h2>
-      <p class="section-sub">The fastest machines on the planet - handpicked by the birthday boy himself</p>
-      <div class="garage-grid">
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/bmw-m4.jpg" alt="BMW M4 Competition" loading="lazy" />
+    <!-- EVENT DETAILS -->
+    <section class="details-section">
+      <div class="details-inner">
+        <h2 class="section-heading">Race Day Details</h2>
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-icon">🎉</div>
+            <div class="detail-label">Occasion</div>
+            <div class="detail-value">Birthday Dinner Celebration</div>
           </div>
-          <div class="car-info">
-            <div class="car-badge">BMW</div>
-            <h3 class="car-name">M4 Competition</h3>
-            <p class="car-stat">503 hp &bull; 0-100 in 3.9s</p>
+          <div class="detail-card">
+            <div class="detail-icon">📅</div>
+            <div class="detail-label">Date</div>
+            <div class="detail-value">Saturday, 18 July 2026</div>
           </div>
-        </div>
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/lamborghini-revuelto.jpg" alt="Lamborghini Revuelto" loading="lazy" />
+          <div class="detail-card">
+            <div class="detail-icon">🕖</div>
+            <div class="detail-label">Time</div>
+            <div class="detail-value">7:00 PM onwards</div>
           </div>
-          <div class="car-info">
-            <div class="car-badge">Lamborghini</div>
-            <h3 class="car-name">Revuelto</h3>
-            <p class="car-stat">1,001 hp &bull; 0-100 in 2.5s</p>
-          </div>
-        </div>
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/ferrari-296.jpg" alt="Ferrari 296 GTB Spider" loading="lazy" />
-          </div>
-          <div class="car-info">
-            <div class="car-badge">Ferrari</div>
-            <h3 class="car-name">296 Spider</h3>
-            <p class="car-stat">830 hp &bull; 0-100 in 2.9s</p>
+          <div class="detail-card">
+            <div class="detail-icon">📍</div>
+            <div class="detail-label">Venue</div>
+            <div class="detail-value">Tall Oaks, Bengaluru</div>
           </div>
         </div>
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/bmw-m8.jpg" alt="BMW M8 Competition" loading="lazy" />
-          </div>
-          <div class="car-info">
-            <div class="car-badge">BMW</div>
-            <h3 class="car-name">M8 Competition</h3>
-            <p class="car-stat">617 hp &bull; 0-100 in 3.3s</p>
-          </div>
-        </div>
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/bugatti-chiron.jpg" alt="Bugatti Chiron" loading="lazy" />
-          </div>
-          <div class="car-info">
-            <div class="car-badge">Bugatti</div>
-            <h3 class="car-name">Chiron</h3>
-            <p class="car-stat">1,479 hp &bull; Top speed 420 km/h</p>
-          </div>
-        </div>
-
-        <div class="car-card">
-          <div class="car-img-wrap">
-            <img src="img/mercedes-amg-one.jpg" alt="Mercedes-AMG ONE" loading="lazy" />
-          </div>
-          <div class="car-info">
-            <div class="car-badge">Mercedes</div>
-            <h3 class="car-name">AMG ONE</h3>
-            <p class="car-stat">1,063 hp &bull; F1 tech on the road</p>
-          </div>
-        </div>
-
-        <div class="car-card car-card--wide">
-          <div class="car-img-wrap">
-            <img src="img/bugatti-bolide.jpg" alt="Bugatti Bolide" loading="lazy" />
-          </div>
-          <div class="car-info">
-            <div class="car-badge">Bugatti</div>
-            <h3 class="car-name">Bolide</h3>
-            <p class="car-stat">1,825 hp &bull; Track-only beast</p>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- LOCATION -->
-    <section class="section location-section">
-      <h2 class="section-title"><span class="flag-icon">🗺️</span> Find Us</h2>
-      <div class="map-wrap">
-        <iframe
-          title="Tall Oaks venue map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0!2d77.7627012!3d13.0193151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fff8ae8a427%3A0x8c8412e6c22357b9!2sTall+Oaks!5e0!3m2!1sen!2sin!4v1700000000000"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <section class="location-section">
+      <div class="location-inner">
+        <h2 class="section-heading">Find Us</h2>
+        <div class="map-wrap">
+          <iframe
+            title="Tall Oaks venue map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0!2d77.7627012!3d13.0193151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fff8ae8a427%3A0x8c8412e6c22357b9!2sTall+Oaks!5e0!3m2!1sen!2sin!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p class="address-line">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          152/24-1, Seegehalli, Krishnarajapuram, Bengaluru, Karnataka 560067
+        </p>
+        <a class="map-btn" href="https://maps.app.goo.gl/MPazFb7qdbaah4wt5" target="_blank" rel="noopener">
+          Open in Google Maps
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
       </div>
-      <p class="address-text">
-        Tall Oaks, 152/24-1, Seegehalli, Krishnarajapuram, Bengaluru, Karnataka 560067
-      </p>
-      <a class="directions-btn" href="https://maps.app.goo.gl/MPazFb7qdbaah4wt5" target="_blank" rel="noopener">
-        Open in Google Maps &rarr;
-      </a>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="checkered-band"></div>
+    <div class="footer-check-bar"></div>
     <div class="footer-inner">
-      <svg class="footer-car" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="12" y="20" width="95" height="18" rx="5" fill="#E8442B" opacity="0.7"/>
-        <ellipse cx="60" cy="20" rx="24" ry="10" fill="#CC3322" opacity="0.7"/>
-        <circle cx="32" cy="40" r="8" fill="#444"/>
-        <circle cx="88" cy="40" r="8" fill="#444"/>
-        <text x="60" y="32" text-anchor="middle" font-size="9" font-weight="900" fill="#fff" font-family="Arial Black, Arial, sans-serif">7</text>
-      </svg>
-      <p class="footer-msg">See you on the track!</p>
-      <p class="footer-contact">Questions? Reach out to Tuhin or Swadhina</p>
+      <p class="footer-headline">See you on the track! 🏎️</p>
+      <p class="footer-note">Questions? Reach out to Tuhin or Swadhina</p>
     </div>
   </footer>
 
+  <script src="carousel.js"></script>
 </body>
 </html>
