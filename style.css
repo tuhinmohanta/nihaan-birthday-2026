@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--ff-body);
-  background: var(--cream);
-  color: var(--indigo);
+  background: var(--indigo);
+  color: var(--white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
