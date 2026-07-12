@@ -164,7 +164,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.75rem 1.25rem 1.25rem;
+  padding: 1.75rem 1.25rem 3.4rem; /* extra bottom room for the scroll cue */
 }
 
 .hero-top { position: relative; z-index: 3; }
@@ -279,6 +279,60 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-crew { animation: none; }
 }
+
+/* Scroll cue — nudge to the sections below the full-height hero */
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.scroll-cue-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+.scroll-cue-chev {
+  display: block;
+  color: var(--red);
+  animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+.scroll-cue-chev svg {
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.55));
+}
+
+.scroll-cue.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-chev { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+html { scroll-behavior: smooth; }
 
 /* Bottom meta */
 .hero-bottom {

@@ -140,6 +140,18 @@
   /* ─────────────────────────────────────
      SCROLL REVEAL
   ───────────────────────────────────── */
+  // Hide the hero scroll cue once the user starts scrolling
+  var scrollCue = document.querySelector('.scroll-cue');
+  if (scrollCue) {
+    var hideCue = function () {
+      if (window.scrollY > 40) {
+        scrollCue.classList.add('is-hidden');
+        window.removeEventListener('scroll', hideCue);
+      }
+    };
+    window.addEventListener('scroll', hideCue, { passive: true });
+  }
+
   var revEls = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window) {
