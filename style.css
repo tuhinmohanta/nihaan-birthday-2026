@@ -248,12 +248,12 @@ body {
   color: inherit;
   text-decoration: none;
   width: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 .hero-chip--link:hover,
 .hero-chip--link:focus-within {
-  background: rgba(220, 38, 38, 0.2);
-  border-color: rgba(220, 38, 38, 0.5);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .hero-car-label {
