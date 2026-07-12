@@ -11,29 +11,23 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="checkered-top"></div>
+    <div class="checkered-band"></div>
     <div class="hero-inner">
       <div class="car-wrap">
-        <svg class="race-car" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Body -->
-          <rect x="20" y="35" width="160" height="28" rx="8" fill="#E8442B"/>
-          <!-- Cockpit -->
-          <ellipse cx="100" cy="35" rx="38" ry="16" fill="#CC3322"/>
-          <!-- Windshield -->
-          <ellipse cx="100" cy="34" rx="28" ry="10" fill="#7ED4F7" opacity="0.8"/>
-          <!-- Front wing -->
-          <polygon points="175,52 200,48 200,63 175,63" fill="#CC3322"/>
-          <!-- Rear wing -->
-          <rect x="15" y="28" width="12" height="4" rx="2" fill="#CC3322"/>
-          <!-- Wheels -->
-          <circle cx="55" cy="65" r="13" fill="#222"/>
-          <circle cx="55" cy="65" r="7" fill="#555"/>
-          <circle cx="145" cy="65" r="13" fill="#222"/>
-          <circle cx="145" cy="65" r="7" fill="#555"/>
-          <!-- Exhaust detail -->
-          <rect x="10" y="44" width="14" height="6" rx="3" fill="#AA2211"/>
-          <!-- Number -->
-          <text x="100" y="52" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff" font-family="Arial, sans-serif">7</text>
+        <svg class="race-car" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="22" y="38" width="170" height="30" rx="9" fill="#E8442B"/>
+          <ellipse cx="107" cy="38" rx="42" ry="18" fill="#CC3322"/>
+          <ellipse cx="107" cy="37" rx="31" ry="11" fill="#7ED4F7" opacity="0.85"/>
+          <polygon points="185,56 215,50 215,68 185,68" fill="#CC3322"/>
+          <rect x="14" y="30" width="14" height="5" rx="2.5" fill="#AA2211"/>
+          <circle cx="58" cy="70" r="14" fill="#1a1a1a"/>
+          <circle cx="58" cy="70" r="8" fill="#444"/>
+          <circle cx="58" cy="70" r="3" fill="#888"/>
+          <circle cx="158" cy="70" r="14" fill="#1a1a1a"/>
+          <circle cx="158" cy="70" r="8" fill="#444"/>
+          <circle cx="158" cy="70" r="3" fill="#888"/>
+          <rect x="8" y="46" width="16" height="7" rx="3.5" fill="#991100"/>
+          <text x="107" y="57" text-anchor="middle" font-size="15" font-weight="900" fill="#fff" font-family="Arial Black, Arial, sans-serif">7</text>
         </svg>
       </div>
       <p class="pre-headline">Ready, Set, Celebrate!</p>
@@ -42,55 +36,146 @@
       <div class="event-snapshot">
         <div class="snapshot-item">
           <span class="snap-icon">📅</span>
-          <span>Saturday, 18 July 2026</span>
+          <div>
+            <span class="snap-label">Date</span>
+            <span class="snap-value">Saturday, 18 July 2026</span>
+          </div>
         </div>
+        <div class="snapshot-divider"></div>
         <div class="snapshot-item">
           <span class="snap-icon">🕖</span>
-          <span>7:00 PM onwards</span>
+          <div>
+            <span class="snap-label">Time</span>
+            <span class="snap-value">7:00 PM onwards</span>
+          </div>
         </div>
+        <div class="snapshot-divider"></div>
         <div class="snapshot-item">
           <span class="snap-icon">📍</span>
-          <span>Tall Oaks</span>
+          <div>
+            <span class="snap-label">Venue</span>
+            <span class="snap-value">Tall Oaks, Bengaluru</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="checkered-bottom"></div>
+    <div class="checkered-band"></div>
   </header>
 
   <main>
 
     <!-- EVENT DETAILS -->
     <section class="section details-section">
-      <h2 class="section-title">
-        <span class="flag-icon">🏁</span> Race Day Details
-      </h2>
+      <h2 class="section-title"><span class="flag-icon">🏁</span> Race Day Details</h2>
       <div class="details-grid">
         <div class="detail-card">
-          <div class="detail-label">What</div>
+          <div class="detail-label">Occasion</div>
           <div class="detail-value">Birthday Dinner Celebration</div>
         </div>
         <div class="detail-card">
-          <div class="detail-label">When</div>
-          <div class="detail-value">Saturday, 18 July 2026<br/>7:00 PM onwards</div>
+          <div class="detail-label">Date</div>
+          <div class="detail-value">Saturday, 18 July 2026</div>
         </div>
         <div class="detail-card">
-          <div class="detail-label">Where</div>
-          <div class="detail-value">Tall Oaks</div>
+          <div class="detail-label">Time</div>
+          <div class="detail-value">7:00 PM onwards</div>
         </div>
-        <!-- Uncomment and fill when dress code is confirmed
         <div class="detail-card">
-          <div class="detail-label">Dress Code</div>
-          <div class="detail-value">TBD</div>
+          <div class="detail-label">Venue</div>
+          <div class="detail-value">Tall Oaks, Bengaluru</div>
         </div>
-        -->
+      </div>
+    </section>
+
+    <!-- CAR GALLERY -->
+    <section class="section garage-section">
+      <h2 class="section-title"><span class="flag-icon">🚗</span> Nihaan's Dream Garage</h2>
+      <p class="section-sub">The fastest machines on the planet - handpicked by the birthday boy himself</p>
+      <div class="garage-grid">
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/bmw-m4.jpg" alt="BMW M4 Competition" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">BMW</div>
+            <h3 class="car-name">M4 Competition</h3>
+            <p class="car-stat">503 hp &bull; 0-100 in 3.9s</p>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/lamborghini-revuelto.jpg" alt="Lamborghini Revuelto" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">Lamborghini</div>
+            <h3 class="car-name">Revuelto</h3>
+            <p class="car-stat">1,001 hp &bull; 0-100 in 2.5s</p>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/ferrari-296.jpg" alt="Ferrari 296 GTB Spider" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">Ferrari</div>
+            <h3 class="car-name">296 Spider</h3>
+            <p class="car-stat">830 hp &bull; 0-100 in 2.9s</p>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/bmw-m8.jpg" alt="BMW M8 Competition" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">BMW</div>
+            <h3 class="car-name">M8 Competition</h3>
+            <p class="car-stat">617 hp &bull; 0-100 in 3.3s</p>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/bugatti-chiron.jpg" alt="Bugatti Chiron" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">Bugatti</div>
+            <h3 class="car-name">Chiron</h3>
+            <p class="car-stat">1,479 hp &bull; Top speed 420 km/h</p>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-img-wrap">
+            <img src="img/mercedes-amg-one.jpg" alt="Mercedes-AMG ONE" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">Mercedes</div>
+            <h3 class="car-name">AMG ONE</h3>
+            <p class="car-stat">1,063 hp &bull; F1 tech on the road</p>
+          </div>
+        </div>
+
+        <div class="car-card car-card--wide">
+          <div class="car-img-wrap">
+            <img src="img/bugatti-bolide.jpg" alt="Bugatti Bolide" loading="lazy" />
+          </div>
+          <div class="car-info">
+            <div class="car-badge">Bugatti</div>
+            <h3 class="car-name">Bolide</h3>
+            <p class="car-stat">1,825 hp &bull; Track-only beast</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- LOCATION -->
     <section class="section location-section">
-      <h2 class="section-title">
-        <span class="flag-icon">🗺️</span> Find Us
-      </h2>
+      <h2 class="section-title"><span class="flag-icon">🗺️</span> Find Us</h2>
       <div class="map-wrap">
         <iframe
           title="Tall Oaks venue map"
@@ -112,9 +197,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="checkered-top"></div>
+    <div class="checkered-band"></div>
     <div class="footer-inner">
-      <p class="footer-msg">See you on the track! 🏎️</p>
+      <svg class="footer-car" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="12" y="20" width="95" height="18" rx="5" fill="#E8442B" opacity="0.7"/>
+        <ellipse cx="60" cy="20" rx="24" ry="10" fill="#CC3322" opacity="0.7"/>
+        <circle cx="32" cy="40" r="8" fill="#444"/>
+        <circle cx="88" cy="40" r="8" fill="#444"/>
+        <text x="60" y="32" text-anchor="middle" font-size="9" font-weight="900" fill="#fff" font-family="Arial Black, Arial, sans-serif">7</text>
+      </svg>
+      <p class="footer-msg">See you on the track!</p>
       <p class="footer-contact">Questions? Reach out to Tuhin or Swadhina</p>
     </div>
   </footer>
